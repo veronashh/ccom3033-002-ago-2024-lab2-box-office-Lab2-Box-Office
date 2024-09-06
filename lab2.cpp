@@ -45,7 +45,7 @@ int main () {
 
     // Precisión para valores monetarios
     const int width = 30;  
-    const int monetaryWidth = 30; 
+    const int monetaryWidth = 32; 
     
     cout << fixed << setprecision(2);
 
