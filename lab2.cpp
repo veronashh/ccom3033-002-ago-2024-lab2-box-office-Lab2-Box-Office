@@ -58,7 +58,7 @@ int main () {
     cout << left << setw(width) << "Child Tickets Sold:" 
          << right << setw(width) << childticketssold << endl;
     
-    // For monetary values, use the monetaryWidth to ensure decimal alignment
+    // Valores monetarios
     cout << left << setw(width) << "Gross Box Office Profit:" 
          << right << setw(monetaryWidth) << "$ " << grossBoxOfficeProfit << endl;
     cout << left << setw(width) << "Net Box Office Profit:" 
