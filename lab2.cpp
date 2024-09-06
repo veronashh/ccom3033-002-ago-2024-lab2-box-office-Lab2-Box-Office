@@ -52,11 +52,11 @@ int main () {
     cout << left << setw(30) << "Child Tickets Sold:" 
          << right << setw(30) << childticketssold << endl;
     cout << left << setw(30) << "Gross Box Office Profit:" 
-         << right << setw(30) << fixed << setprecision(2) << "$" << grossBoxOfficeProfit << endl;
+         << right << setw(30) << fixed << setprecision(2) << "$ " << grossBoxOfficeProfit << endl;
     cout << left << setw(30) << "Net Box Office Profit:" 
-         << right << setw(30) << fixed << setprecision(2) << "$" << netBoxOfficeProfit << endl;
+         << right << setw(30) << fixed << setprecision(2) << "$ " << netBoxOfficeProfit << endl;
     cout << left << setw(30) << "Amount Paid to Distributor:" 
-         << right << setw(30) << fixed << setprecision(2) << "$" << amountPaidToDistributor << endl;
+         << right << setw(30) << fixed << setprecision(2) << "$ " << amountPaidToDistributor << endl;
 
     return 0;
 }
