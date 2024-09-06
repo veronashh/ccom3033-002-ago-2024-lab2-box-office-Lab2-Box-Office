@@ -9,7 +9,7 @@
 using namespace std;
 
 int main () {
-    //Displega el proposito del programa.
+    //Desplegar el proposito del programa.
     cout << "This program calculates a theater's gross and net box office profit for a night." << endl;
 
     //Solicitar nombre de la película.
@@ -17,7 +17,7 @@ int main () {
     cout << "Enter the name of the movie: ";
     getline(cin, moviename);
 
-    //Cantidad de boletos vendidos de adulto y niños
+    //Solicitar cantidad de boletos vendidos de adulto y niños
     int adultticketssold;
 
     cout << "Enter the number of adult tickets sold: ";
@@ -31,32 +31,40 @@ int main () {
     //Constantes para precios de boletos.
     const double ADULT_TICKET_PRICE = 10.00;
     const double CHILD_TICKET_PRICE = 6.00;
-    // 20% of gross profit
+    // 20% de ganancia bruta 
     const double THEATER_PERCENTAGE = 0.20; 
 
-    // Calcular Gross Box Office Profit
+    // Calcular ganancia bruta de box office 
     double grossBoxOfficeProfit = (adultticketssold * ADULT_TICKET_PRICE) + (childticketssold * CHILD_TICKET_PRICE);
 
-    // Calcular Net Box Office Profit
+    // Calcular ganancia neta de box office
     double netBoxOfficeProfit = grossBoxOfficeProfit * THEATER_PERCENTAGE;
 
-    // Calcular Amount Paid to Distributor
+    // Calcular cantidad pagada a distribuidor
     double amountPaidToDistributor = grossBoxOfficeProfit - netBoxOfficeProfit;
 
-    // Display the results with proper formatting
+    // Precisión para valores monetarios
+    const int width = 30;  
+    const int monetaryWidth = 30; 
+    
+    cout << fixed << setprecision(2);
+
+    // Desplegar resultados con formato correcto
     cout << endl;
-    cout << left << setw(30) << "Movie Name:" 
-         << right << setw(30) << "\"" << moviename << "\"" << endl;
-    cout << left << setw(30) << "Adult Tickets Sold:" 
-         << right << setw(30) << adultticketssold << endl;
-    cout << left << setw(30) << "Child Tickets Sold:" 
-         << right << setw(30) << childticketssold << endl;
-    cout << left << setw(30) << "Gross Box Office Profit:" 
-         << right << setw(30) << fixed << setprecision(2) << "$ " << grossBoxOfficeProfit << endl;
-    cout << left << setw(30) << "Net Box Office Profit:" 
-         << right << setw(30) << fixed << setprecision(2) << "$ " << netBoxOfficeProfit << endl;
-    cout << left << setw(30) << "Amount Paid to Distributor:" 
-         << right << setw(30) << fixed << setprecision(2) << "$ " << amountPaidToDistributor << endl;
+    cout << left << setw(width) << "Movie Name:" 
+         << right << setw(width) << "\"" << moviename << "\"" << endl;
+    cout << left << setw(width) << "Adult Tickets Sold:" 
+         << right << setw(width) << adultticketssold << endl;
+    cout << left << setw(width) << "Child Tickets Sold:" 
+         << right << setw(width) << childticketssold << endl;
+    
+    // For monetary values, use the monetaryWidth to ensure decimal alignment
+    cout << left << setw(width) << "Gross Box Office Profit:" 
+         << right << setw(monetaryWidth) << "$ " << grossBoxOfficeProfit << endl;
+    cout << left << setw(width) << "Net Box Office Profit:" 
+         << right << setw(monetaryWidth) << "$ " << netBoxOfficeProfit << endl;
+    cout << left << setw(width) << "Amount Paid to Distributor:" 
+         << right << setw(monetaryWidth) << "$ " << amountPaidToDistributor << endl;
 
     return 0;
 }
