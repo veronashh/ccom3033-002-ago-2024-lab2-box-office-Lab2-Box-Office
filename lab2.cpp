@@ -60,11 +60,11 @@ int main () {
     
     // Valores monetarios
     cout << left << setw(width) << "Gross Box Office Profit:" 
-         << right << setw(monetaryWidth) << "$ " << grossBoxOfficeProfit << endl;
+         << right << setw(monetaryWidth) << "$ " << fixed << showpoint<< grossBoxOfficeProfit << endl;
     cout << left << setw(width) << "Net Box Office Profit:" 
-         << right << setw(monetaryWidth) << "$ " << netBoxOfficeProfit << endl;
+         << right << setw(monetaryWidth) << "$ " << fixed << showpoint<<netBoxOfficeProfit << endl;
     cout << left << setw(width) << "Amount Paid to Distributor:" 
-         << right << setw(monetaryWidth) << "$ " << amountPaidToDistributor << endl;
+         << right << setw(monetaryWidth) << "$ " << fixed << showpoint<< amountPaidToDistributor << endl;
 
     return 0;
 }
