@@ -44,27 +44,25 @@ int main () {
     double amountPaidToDistributor = grossBoxOfficeProfit - netBoxOfficeProfit;
 
     // Precisión para valores monetarios
-    const int width = 30;  
-    const int monetaryWidth = 32; 
     
     cout << fixed << setprecision(2);
 
     // Desplegar resultados con formato correcto
     cout << endl;
-    cout << left << setw(width) << "Movie Name:" 
-         << right << setw(width) << "\"" << moviename << "\"" << endl;
-    cout << left << setw(width) << "Adult Tickets Sold:" 
-         << right << setw(width) << adultticketssold << endl;
-    cout << left << setw(width) << "Child Tickets Sold:" 
-         << right << setw(width) << childticketssold << endl;
+    cout << left << setw(20) << "Movie Name:" 
+         << right << setw(24) << "\"" << moviename << "\"" << endl;
+    cout << left << setw(20) << "Adult Tickets Sold:" 
+         << right << setw(30) << adultticketssold << endl;
+    cout << left << setw(20) << "Child Tickets Sold:" 
+         << right << setw(30) << childticketssold << endl;
     
     // Valores monetarios
-    cout << left << setw(width) << "Gross Box Office Profit:" 
-         << right << setw(monetaryWidth) << "$ " << fixed << showpoint<< grossBoxOfficeProfit << endl;
-    cout << left << setw(width) << "Net Box Office Profit:" 
-         << right << setw(monetaryWidth) << "$ " << fixed << showpoint<<netBoxOfficeProfit << endl;
-    cout << left << setw(width) << "Amount Paid to Distributor:" 
-         << right << setw(monetaryWidth) << "$ " << fixed << showpoint<< amountPaidToDistributor << endl;
+    cout << left << setw(20) << "Gross Box Office Profit:" 
+         << right << setw(24) << "$ " << fixed << showpoint<< grossBoxOfficeProfit << endl;
+    cout << left << setw(20) << "Net Box Office Profit:" 
+         << right << setw(26) << "$ " << fixed << showpoint <<netBoxOfficeProfit << endl;
+    cout << left << setw(20) << "Amount Paid to Distributor:" 
+         << right << setw(21) << "$ " << fixed << showpoint<< amountPaidToDistributor << endl;
 
     return 0;
 }
